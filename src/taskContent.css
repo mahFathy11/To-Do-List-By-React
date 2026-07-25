@@ -1,0 +1,86 @@
+.task{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(109, 23, 175);
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+.task .task-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task .task-content h3{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+.task .task-content p{
+    font-size: 18px;
+    color: #666;
+    margin-top: 0;
+}
+
+.task .control{
+    display: flex;
+    gap: 5px;
+}
+.task .control button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #c6c6c6;
+    background-color: white;
+    color: #5a5a5a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.task .control button:hover {
+    border-color: #8a4bff;
+    color: #8a4bff;
+    transform: translateY(-1px);
+}
+
+.task .control button.done {
+    border-color: #2E7D32;
+    color: #2E7D32;
+}
+
+.task .control button.done:hover,
+.task .control button.done.active {
+    background-color: #2E7D32;
+    color: white;
+}
+
+.task .control button.edit {
+    border-color: #00897B;
+    color: #00897B;
+}
+
+.task .control button.edit:hover {
+    background-color: #00897B;
+    color: white;
+}
+
+.task .control button.delete {
+    border-color: #BF360C;
+    color: #BF360C;
+}
+
+.task .control button.delete:hover {
+    background-color: #BF360C;
+    color: white;
+}

@@ -1,0 +1,192 @@
+.taskPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+    min-height: 70vh;
+    max-height: 85vh;
+    margin: 50px auto;
+    background-color: rgb(109, 23, 175);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.title {
+    margin:20px auto 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.nav {
+    margin:10 auto;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    border: 1px solid rgb(179, 174, 174);
+    border-radius: 4px;
+}
+
+.nav button {
+    background-color: white;
+    color: rgb(49, 48, 48);
+    font-size: 18px;
+    border: none;
+    padding: 5px 13px;
+    cursor: pointer;
+    transition: 0.2s linear all;
+}
+.nav li:not(:first-child) {
+    border-left: 1px solid rgb(179, 174, 174);
+}
+
+.nav button[id="grey"]:hover,.nav button[id="grey"].active {
+    background-color: #9E9E9E;
+    color: white;
+}
+.nav button[id="green"]:hover,.nav button[id="green"].active {
+    background-color: #00796B;
+    color: white;
+}
+.nav button[id="red"]:hover,nav button[id="red"].active {
+    background-color: #BF360C;
+    color: white;
+}
+
+.tasksList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    padding-right: 6px;
+    flex: 1;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.add button {
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color:#e112db;
+    border:#e112db 2px solid;
+    transition: 0.2s linear all;
+}
+.add button.active:hover{
+    background-color: #e112db;
+    border: 2px solid white;
+    color:white;
+}
+
+.add button.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.add input{
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.confirmOverlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.confirmBox{
+    color:black;
+    width:400px;
+    background-color:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 1px 6px black;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:15px;
+    cursor:default;
+}
+.confirmButtons{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+.confirmCancel{
+    cursor:pointer;
+    background-color:#BF360C;
+    border:none;
+    outline:none;
+    color:white;
+    padding:5px 10px;
+    border-radius:6px;
+    font-size:17px;
+}
+.confirmDelete{
+    cursor:pointer;
+    background-color:#2E7D32;
+    border:none;
+    outline:none;
+    color:white;
+    padding:5px 10px;
+    border-radius:6px;
+    font-size:17px;
+}
+
+.clear{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.clear button{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 20px;
+    transition: 0.2s linear all;
+}
+
+ .clearComplete{
+    border: 2px solid #7E57C2;
+    background-color: white;
+    color: #7E57C2;
+}
+.clearComplete:hover{
+    background-color: #7E57C2;
+    border: 2px solid white;
+    color: white;
+}
+
+.clearAll{
+    background-color: white;
+    border: 2px solid #AD1457;
+    color: #C2185B;
+}
+.clearAll:hover{
+    background-color: #C2185B;
+    border: 2px solid white;
+    color: white;
+}
